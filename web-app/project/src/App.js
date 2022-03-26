@@ -1,11 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios'
 
 import {GoogleLogin} from 'react-google-login'
 
 const responseGoogle = (response) => {
   console.log(response);
-} 
+  const {code} = response;
+  axios.post('/api/create-tokens', {code})
+       .then(response => {
+         console.log(response.data)
+       })
+       .catch(error=> {
+         console.log(error.message)
+       })
+}      
 
 function App() {
   return (
