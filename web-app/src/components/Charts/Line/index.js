@@ -18,9 +18,9 @@ class ChartLine extends Component {
         new Chart(myChartRef, {
             type: 'line',
             data: {
-                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                labels: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"],
                 datasets: [{
-                    label: "Earnings",
+                    label: "Completed Assignments",
                     lineTension: 0.3,
                     backgroundColor: "rgba(78, 115, 223, 0.05)",
                     borderColor: "rgba(78, 115, 223, 1)",
@@ -32,7 +32,7 @@ class ChartLine extends Component {
                     pointHoverBorderColor: "rgba(78, 115, 223, 1)",
                     pointHitRadius: 10,
                     pointBorderWidth: 2,
-                    data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
+                    data: [0, 2, 3, 4, 5, 5, 5, 10],
                 }],
             },
             options: {
@@ -60,7 +60,7 @@ class ChartLine extends Component {
                     }],
                     yAxes: [{
                         ticks: {
-                            maxTicksLimit: 5,
+                            maxTicksLimit: 8,
                             padding: 10,
                             // Include a dollar sign in the ticks
                         },
@@ -103,12 +103,12 @@ class ChartLine extends Component {
 
     render() {
         return (
-            <CardBasic title="Area Chart">
+            <CardBasic title="Weekly Progress">
                 <div className="chart-area">
                     <canvas id="myAreaChart" ref={this.chartRef}></canvas>
                 </div>
                 <hr />
-                Styling for the area chart can be found in the <code>/Components/Charts/Line/Index.js</code> file.
+                If you complete today's assignments, your completion will increase to: <code><b>67%</b></code>
             </CardBasic>
         )
     }

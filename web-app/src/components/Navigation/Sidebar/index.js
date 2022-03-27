@@ -27,14 +27,12 @@ class Sidebar extends Component {
   render() {
     const { clickMenuOpen, toggled } = this.props;
     return (
-      <ul className={toggled ? 'navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled' : 'navbar-nav bg-gradient-primary sidebar sidebar-dark accordion'} id="accordionSidebar">
+      <ul className={toggled ? 'navbar-nav bg-gradient-primary sidebar sidebar-light accordion toggled' : 'navbar-nav bg-gradient-primary sidebar sidebar-light accordion'} id="accordionSidebar">
 
         {/* <!-- Sidebar - Brand --> */}
         <a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-          <div className="sidebar-brand-icon rotate-n-15">
-            <i className="fas fa-laugh-wink"></i>
-          </div>
-          <div className="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+
+          <div className="sidebar-brand-text mx-3">OnTrack</div>
         </a>
 
         {/* <!-- Divider --> */}
@@ -47,25 +45,16 @@ class Sidebar extends Component {
             <span>Dashboard</span></Link>
         </li>
 
-        {/* <!-- Divider --> */}
-        <hr className="sidebar-divider" />
-
-        {/* <!-- Heading --> */}
-        <div className="sidebar-heading">
-          Interface
-        </div>
-
         {/* <!-- Nav Item - Pages Collapse Menu --> */}
         <li className="nav-item">
           <a className='nav-link collapsed' href="#" data-toggle="collapse" data-target="#collapseTwo"  aria-controls="collapseTwo">
             <i className="fas fa-fw fa-cog"></i>
-            <span>Components</span>
+            <span>Tasks</span>
           </a>
           <div id="collapseTwo" className='collapse' aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div className="bg-white py-2 collapse-inner rounded">
-              <h6 className="collapse-header">Custom Components:</h6>
-              <a className="collapse-item" href="buttons.html">Buttons</a>
-              <Link className="collapse-item" to="/cards">Cards</Link>
+            <Link className="collapse-item" to="/weekly-tasks">Weekly</Link>
+              <Link className="collapse-item" to="/cards">Upcoming</Link>
             </div>
           </div>
         </li>

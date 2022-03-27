@@ -14,11 +14,11 @@ class ChartDonut extends Component {
         new Chart(myPieChart, {
             type: 'doughnut',
             data: {
-                labels: ["Direct", "Referral", "Social"],
+                labels: ["Psych", "Math", "Biology", "Biology Lab", "Computer Science"],
                 datasets: [{
-                    data: [55, 30, 15],
-                    backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
-                    hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+                    data: [1, 1, 1, 1, 1],
+                    backgroundColor: ['#ff4a4a', '#fcba03', '#00c760', '#00a3c7', '#997aff'],
+                    hoverBackgroundColor: [],
                     hoverBorderColor: "rgba(234, 236, 244, 1)",
                 }],
             },
@@ -44,12 +44,16 @@ class ChartDonut extends Component {
 
     render() {
         return (
-            <CardBasic title="Donut Chart">
+            <CardBasic title="Weekly Homework Completion">
                  <div className="chart-pie pt-4">
                         <canvas id="myPieChart" ref={this.chartRef}></canvas>
                     </div>
                     <hr />
-                    Styling for the donut chart can be found in the <code>/Components/Charts/Donut/index.js</code> file.
+                    Psych: <code>0</code> assignments left. <b>All assignments complete!</b><hr />
+                    Math: <code>2</code> assignments left<hr />
+                    Biology: <code>1</code> assignments left<hr />
+                    Biology Lab: <code>1</code> assignments left<hr />
+                    Computer Science: <code>3</code> assignments left<hr />
             </CardBasic>
         )
     }

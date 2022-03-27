@@ -9,9 +9,36 @@ import ChartDonut from '../../components/Charts/Donut';
 import ChartLine from '../../components/Charts/Line';
 import PageHeading from '../../components/PageHeading';
 
+const GOOGLE_API_KEY = 'AIzaSyBlS61omQ8rh-Lqp3gziw-41hHVgXmDlto';
+const CALENDAR_ID = 'jaykatyan@gmail.com';
+const gapi = 'https://apis.google.com/js/api.js"'
+
 class Dashboard extends Component {
   componentWillMount() {
     document.getElementById('body').className = 'page-top'
+  }
+
+  getEvents(){
+    let that = this;
+    function start() {
+      gapi.client.init({
+        'apiKey': GOOGLE_API_KEY
+      }).then(function() {
+        return gapi.client.request({
+          'path': `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events`,
+        })
+      }).then( (response) => {
+        let events = response.result.items
+        that.setState({
+          events
+        }, ()=>{
+          console.log(that.state.events);
+        })
+      }, function(reason) {
+        console.log(reason);
+      });
+    }
+    gapi.load('client', start)
   }
 
   render() {
@@ -43,25 +70,25 @@ class Dashboard extends Component {
 
                 {/* <!-- Content Row --> */}
                 <div className="row">
-                  <CardInfo title="Earnings (Monthly)"
+                  <CardInfo title="Assigned Weekly Tasks"
                     icon="calendar"
                     color="primary"
-                    value="$40,000" />
+                    value="12" />
 
-                  <CardInfo title="Earnings (Annual)"
+                  <CardInfo title="Completed Weekly Tasks"
                     icon="calendar"
                     color="success"
-                    value="215,000" />
+                    value="5" />
 
-                  <CardInfo title="Tasks"
+                  <CardInfo title="Hours Remaining"
                     icon="clipboard"
                     color="info"
-                    value="50%" />
+                    value="16" />
 
-                  <CardInfo title="Pending Requests"
-                    icon="comments"
+                  <CardInfo title="Today's Tasks"
+                    icon="clipboard"
                     color="warning"
-                    value="18" />
+                    value="3" />
                 </div>
                 <div className="row">
                   <div className="col-xl-8 col-lg-6">
@@ -83,7 +110,7 @@ class Dashboard extends Component {
             <footer className="sticky-footer bg-white">
               <div className="container my-auto">
                 <div className="copyright text-center my-auto">
-                  <span>Copyright &copy; Your Website 2019</span>
+                  <span>Copyright &copy; <b>OnTrack</b> 2022</span>
                 </div>
               </div>
             </footer>

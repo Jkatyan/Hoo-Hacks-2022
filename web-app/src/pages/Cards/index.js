@@ -1,100 +1,187 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 //Cards
-import CardInfo from '../../components/Cards/Info';
-import CardDefault from '../../components/Cards/Default';
-import CardBasic from '../../components/Cards/Basic';
-import CardCollapse from '../../components/Cards/Collapse';
-import CardDropdown from '../../components/Cards/Dropdown';
+import CardInfo from "../../components/Cards/Info";
+import CardDefault from "../../components/Cards/Default";
+import CardBasic from "../../components/Cards/Basic";
+import CardDropdown from "../../components/Cards/Dropdown";
 
-import PageHeading from '../../components/PageHeading';
+import PageHeading from "../../components/PageHeading";
 
 //Navigation
-import Sidebar from '../../components/Navigation/Sidebar';
-import Topbar from '../../components/Navigation/Topbar';
+import Sidebar from "../../components/Navigation/Sidebar";
+import Topbar from "../../components/Navigation/Topbar";
 
 class Cards extends Component {
-    render() {
-        return (
-            <div>
-                <div id="wrapper">
+  render() {
+    return (
+      <div>
+        <div id="wrapper">
+          {/* <!-- Sidebar --> */}
+          <Sidebar />
+          <div id="content-wrapper" className="d-flex flex-column">
+            {/* <!-- Main Content --> */}
+            <div id="content">
+              {/* <!-- Topbar --> */}
+              <Topbar />
+              {/* <!-- End of Topbar --> */}
 
-                    {/* <!-- Sidebar --> */}
-                    <Sidebar />
-                    <div id="content-wrapper" className="d-flex flex-column">
+              {/* <!-- Begin Page Content --> */}
+              <div className="container-fluid">
+                {/* <!-- Page Heading --> */}
 
-                        {/* <!-- Main Content --> */}
-                        <div id="content">
-
-                            {/* <!-- Topbar --> */}
-                            <Topbar />
-                            {/* <!-- End of Topbar --> */}
-
-                            {/* <!-- Begin Page Content --> */}
-                            <div className="container-fluid">
-
-                                {/* <!-- Page Heading --> */}
-
-                                <PageHeading title="Cards" />
-
-                                {/* <!-- Content Row --> */}
-
-                                <div className="row">
-                                    <CardInfo title="Earnings (Monthly)"
-                                        icon="calendar"
-                                        color="primary"
-                                        value="$40,000" />
-
-                                    <CardInfo title="Earnings (Annual)"
-                                        icon="calendar"
-                                        color="success"
-                                        value="215,000" />
-
-                                    <CardInfo title="Tasks"
-                                        icon="clipboard"
-                                        color="info"
-                                        value="50%" />
-
-                                    <CardInfo title="Pending Requests"
-                                        icon="comments"
-                                        color="warning"
-                                        value="18" />
-                                </div>
-                                <div className="row">
-                                    <div class="col-lg-6">
-                                        <CardDefault title="Card Default Example">
-                                            This card uses Bootstrap's default styling with no utility classes added. Global styles are the only things modifying the look and feel of this default card example.
-    
-                                        </CardDefault>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <CardDropdown title="Card Dropdown Example">
-                                            Dropdown menus can be placed in the card header in order to extend the functionality of a basic card. In this dropdown card example, the Font Awesome vertical ellipsis icon in the card header can be clicked on in order to toggle a dropdown menu.
-    
-                                        </CardDropdown>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div class="col-lg-6">
-                                        <CardBasic title="Card Basic Example">
-                                            The styling for this basic card example is created by using default Bootstrap utility classes. By using utility classes, the style of the card component can be easily modified with no need for any custom CSS!
-                                        </CardBasic>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <CardCollapse title="Card Collapse Example">
-                                            This is a collapsable card example using Bootstrap's built in collapse functionality. <strong>Click on the card header</strong> to see the card body collapse and expand!
-                                        </CardCollapse>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <PageHeading title="Weekly Tasks" />
+                <h5>
+                  After completing a task, fill out how many hours it took you
+                  to complete the task!
+                </h5>
+                <div className="row">
+                  <div class="col-lg-6">
+                    <CardBasic title="PSYC: Weekly Reflection">
+                      <form class="col-lg-6">
+                        <label>
+                          Completion Time:
+                          <br />
+                          <b>Assignment Completed!</b>
+                        </label>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="MATH: Problem Set 6">
+                      <form class="col-lg-6">
+                        <label>
+                          Completion Time:
+                          <br />
+                          <b>Assignment Completed!</b>
+                        </label>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="MATH: Webassign Unit 3-1">
+                      <form class="col-lg-6">
+                        <label>
+                          Completion Time:
+                          <br />
+                          <b>Assignment Completed!</b>
+                        </label>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="MATH: Webassign Unit 3-2">
+                      <form class="col-lg-6">
+                        <label>
+                          Completion Time:
+                          <br />
+                          <input type="text" name="name" />
+                        </label>
+                        <input type="submit" value="Submit" />
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="BIOL Lab: Protein Modeling Pre-Lab">
+                      <form class="col-lg-6">
+                        <label>
+                          Completion Time:
+                          <br />
+                          <b>Assignment Completed!</b>
+                        </label>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="BIOL Lab: Protein Modeling Lab Report">
+                      <form class="col-lg-6">
+                        <label>
+                          Completion Time:
+                          <br />
+                          <input type="text" name="name" />
+                        </label>
+                        <input type="submit" value="Submit" />
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="BIOL: Discussion Post #3">
+                      <form class="col-lg-6">
+                        <label>
+                          Completion Time:
+                          <br />
+                          <b>Assignment Completed!</b>
+                        </label>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="BIOL: Homework 7">
+                      <form class="col-lg-6">
+                        <label>
+                          Completion Time:
+                          <br />
+                          <input type="text" name="name" />
+                        </label>
+                        <input type="submit" value="Submit" />
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="CS: Linked Lists Workout">
+                      <form class="col-lg-6">
+                        <label>
+                          Completion Time:
+                          <br />
+                          <b>Assignment Completed!</b>
+                        </label>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="CS: Machine #2">
+                      <form class="col-lg-6">
+                        <label>
+                          Completion Time:
+                          <br />
+                          <input type="text" name="name" />
+                        </label>
+                        <input type="submit" value="Submit" />
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="CS: Ethics in AI Discussion">
+                      <form class="col-lg-6">
+                        <label>
+                          Completion Time:
+                          <br />
+                          <input type="text" name="name" />
+                        </label>
+                        <input type="submit" value="Submit" />
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="CS: Lab 9: UML Study">
+                      <form class="col-lg-6">
+                        <label>
+                          Completion Time:
+                          <br />
+                          <input type="text" name="name" />
+                        </label>
+                        <input type="submit" value="Submit" />
+                      </form>
+                    </CardBasic>
+                  </div>
                 </div>
+              </div>
             </div>
-
-        )
-    }
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Cards;
