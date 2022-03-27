@@ -76,7 +76,7 @@ class Cards extends Component {
                           Completion Time:
                           <br />
                           <input type="text" name="name" />
-                        </label>
+                        </label>⠀
                         <input type="submit" value="Submit" />
                       </form>
                     </CardBasic>
@@ -99,7 +99,7 @@ class Cards extends Component {
                           Completion Time:
                           <br />
                           <input type="text" name="name" />
-                        </label>
+                        </label>⠀
                         <input type="submit" value="Submit" />
                       </form>
                     </CardBasic>
@@ -122,7 +122,7 @@ class Cards extends Component {
                           Completion Time:
                           <br />
                           <input type="text" name="name" />
-                        </label>
+                        </label>⠀
                         <input type="submit" value="Submit" />
                       </form>
                     </CardBasic>
@@ -145,7 +145,7 @@ class Cards extends Component {
                           Completion Time:
                           <br />
                           <input type="text" name="name" />
-                        </label>
+                        </label>⠀
                         <input type="submit" value="Submit" />
                       </form>
                     </CardBasic>
@@ -157,7 +157,7 @@ class Cards extends Component {
                           Completion Time:
                           <br />
                           <input type="text" name="name" />
-                        </label>
+                        </label>⠀
                         <input type="submit" value="Submit" />
                       </form>
                     </CardBasic>
@@ -169,7 +169,7 @@ class Cards extends Component {
                           Completion Time:
                           <br />
                           <input type="text" name="name" />
-                        </label>
+                        </label>⠀
                         <input type="submit" value="Submit" />
                       </form>
                     </CardBasic>
