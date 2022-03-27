@@ -9,16 +9,16 @@ import CardDropdown from "../../components/Cards/Dropdown";
 import PageHeading from "../../components/PageHeading";
 
 //Navigation
-import Sidebar from "../../components/Navigation/Sidebar";
+import Sidebar from "../../components/Navigation/SidebarDirect";
 import Topbar from "../../components/Navigation/Topbar";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-class Cards extends Component {
-    state = {value: ''};
+class Sets extends Component {
+  state = { value: "" };
 
-    handleSubmit(event) {
-        this.setState({value: 'Assignment Completed'});
-      }
+  handleSubmit(event) {
+    this.setState({ value: "Assignment Completed" });
+  }
 
   render() {
     return (
@@ -78,13 +78,12 @@ class Cards extends Component {
                   </div>
                   <div class="col-lg-6">
                     <CardBasic title="MATH: Webassign Unit 3-2">
-                      <form class="col-lg-6" onSubmit={this.handleSubmit}>
+                      <form class="col-lg-6">
                         <label>
                           Completion Time:
                           <br />
-                          <input type="text" name="name" />
-                        </label>⠀
-                        <Link type="submit" value="Submit" to="/sets">Submit</Link>
+                          <b>Assignment Completed!</b>
+                        </label>
                       </form>
                     </CardBasic>
                   </div>
@@ -106,8 +105,11 @@ class Cards extends Component {
                           Completion Time:
                           <br />
                           <input type="text" name="name" />
-                        </label>⠀
-                        <Link type="submit" value="Submit" to="/dashboard">Submit</Link>
+                        </label>
+                        ⠀
+                        <Link type="submit" value="Submit" to="/dashboard">
+                          Submit
+                        </Link>
                       </form>
                     </CardBasic>
                   </div>
@@ -129,8 +131,11 @@ class Cards extends Component {
                           Completion Time:
                           <br />
                           <input type="text" name="name" />
-                        </label>⠀
-                        <Link type="submit" value="Submit" to="/dashboard">Submit</Link>
+                        </label>
+                        ⠀
+                        <Link type="submit" value="Submit" to="/dashboard">
+                          Submit
+                        </Link>
                       </form>
                     </CardBasic>
                   </div>
@@ -152,8 +157,11 @@ class Cards extends Component {
                           Completion Time:
                           <br />
                           <input type="text" name="name" />
-                        </label>⠀
-                        <Link type="submit" value="Submit" to="/dashboard">Submit</Link>
+                        </label>
+                        ⠀
+                        <Link type="submit" value="Submit" to="/dashboard">
+                          Submit
+                        </Link>
                       </form>
                     </CardBasic>
                   </div>
@@ -164,8 +172,11 @@ class Cards extends Component {
                           Completion Time:
                           <br />
                           <input type="text" name="name" />
-                        </label>⠀
-                        <Link type="submit" value="Submit" to="/dashboard">Submit</Link>
+                        </label>
+                        ⠀
+                        <Link type="submit" value="Submit" to="/dashboard">
+                          Submit
+                        </Link>
                       </form>
                     </CardBasic>
                   </div>
@@ -176,8 +187,11 @@ class Cards extends Component {
                           Completion Time:
                           <br />
                           <input type="text" name="name" />
-                        </label>⠀
-                        <Link type="submit" value="Submit" to="/dashboard">Submit</Link>
+                        </label>
+                        ⠀
+                        <Link type="submit" value="Submit" to="/dashboard">
+                          Submit
+                        </Link>
                       </form>
                     </CardBasic>
                   </div>
@@ -191,4 +205,4 @@ class Cards extends Component {
   }
 }
 
-export default Cards;
+export default Sets;
