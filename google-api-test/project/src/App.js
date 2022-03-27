@@ -23,7 +23,7 @@ function App() {
           <h1> Calendar API Login</h1>
         </div>
         <div>
-          <GoogleLogin clientId='1062515714621-35tek1at77jjse1o47cqa1trok77uses.apps.googleusercontent.com'
+          <GoogleLogin clientId=''
                        buttonText='Sign In'
                        onSuccess={responseGoogle}
                        onFailure={responseGoogle}

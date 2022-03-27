@@ -9,7 +9,7 @@ import ChartDonut from '../../components/Charts/Donut';
 import ChartLine from '../../components/Charts/Line';
 import PageHeading from '../../components/PageHeading';
 
-const GOOGLE_API_KEY = 'AIzaSyBlS61omQ8rh-Lqp3gziw-41hHVgXmDlto';
+const GOOGLE_API_KEY = '';
 const CALENDAR_ID = 'jaykatyan@gmail.com';
 const gapi = 'https://apis.google.com/js/api.js"'
 
