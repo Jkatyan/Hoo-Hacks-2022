@@ -102,6 +102,8 @@ class Sets extends Component {
                     <CardBasic title="BIOL Lab: Protein Modeling Lab Report">
                       <form class="col-lg-6">
                         <label>
+                          Estimated Completion Time: <code>2 Hours</code>
+                          <br />
                           Completion Time:
                           <br />
                           <input type="text" name="name" />
@@ -128,6 +130,8 @@ class Sets extends Component {
                     <CardBasic title="BIOL: Homework 7">
                       <form class="col-lg-6">
                         <label>
+                          Estimated Completion Time: <code>2 Hours</code>
+                          <br />
                           Completion Time:
                           <br />
                           <input type="text" name="name" />
@@ -154,6 +158,8 @@ class Sets extends Component {
                     <CardBasic title="CS: Machine #2">
                       <form class="col-lg-6">
                         <label>
+                          Estimated Completion Time: <code>3 Hours</code>
+                          <br />
                           Completion Time:
                           <br />
                           <input type="text" name="name" />
@@ -169,6 +175,8 @@ class Sets extends Component {
                     <CardBasic title="CS: Ethics in AI Discussion">
                       <form class="col-lg-6">
                         <label>
+                          Estimated Completion Time: <code>1 Hours</code>
+                          <br />
                           Completion Time:
                           <br />
                           <input type="text" name="name" />
@@ -184,6 +192,8 @@ class Sets extends Component {
                     <CardBasic title="CS: Lab 9: UML Study">
                       <form class="col-lg-6">
                         <label>
+                          Estimated Completion Time: <code>4 Hours</code>
+                          <br />
                           Completion Time:
                           <br />
                           <input type="text" name="name" />

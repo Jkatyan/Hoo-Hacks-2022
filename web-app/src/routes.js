@@ -6,10 +6,12 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import Dashboard from "./pages/Dashboard";
+import Upcoming from "./pages/Upcoming";
 import NotFound from "./pages/NotFound";
 import Cards from "./pages/Cards";
 import Sets from "./pages/Sets";
 import Checks from "./pages/Checks";
+import Carrier from "./pages/Carrier";
 import Charts from "./pages/Charts";
 
 
@@ -23,6 +25,8 @@ const Routes = () => (
             <Route path="/sets" component={Sets} />
             <Route path="/checks" component={Checks} />
             <Route path="/charts" component={Charts} />
+            <Route path="/upcoming" component={Upcoming} />
+            <Route path="/carrier" component={Carrier} />
             <Route path="*" component={NotFound} />
         </Switch>
     </BrowserRouter>

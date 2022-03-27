@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 //Navigation
-import Sidebar from '../../components/Navigation/Sidebar';
+import SidebarDirect from '../../components/Navigation/Sidebar';
 import Topbar from '../../components/Navigation/Topbar';
 
 import CardInfo from '../../components/Cards/Info';
@@ -48,7 +48,7 @@ class Checks extends Component {
         <div id="wrapper">
 
           {/* <!-- Sidebar --> */}
-          <Sidebar />
+          <SidebarDirect />
           {/* <!-- End of Sidebar --> */}
 
           {/* <!-- Content Wrapper --> */}
@@ -83,7 +83,7 @@ class Checks extends Component {
                   <CardInfo title="Hours Remaining"
                     icon="clipboard"
                     color="info"
-                    value="14" />
+                    value="12" />
 
                   <CardInfo title="Today's Tasks"
                     icon="clipboard"

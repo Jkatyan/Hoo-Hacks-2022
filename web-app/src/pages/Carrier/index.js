@@ -9,11 +9,11 @@ import CardDropdown from "../../components/Cards/Dropdown";
 import PageHeading from "../../components/PageHeading";
 
 //Navigation
-import Sidebar from "../../components/Navigation/Sidebar";
+import SidebarDirect from "../../components/Navigation/SidebarDirect";
 import Topbar from "../../components/Navigation/Topbar";
 import { Link } from "react-router-dom";
 
-class Cards extends Component {
+class Carrier extends Component {
   state = { value: "" };
 
   handleSubmit(event) {
@@ -25,7 +25,7 @@ class Cards extends Component {
       <div>
         <div id="wrapper">
           {/* <!-- Sidebar --> */}
-          <Sidebar />
+          <SidebarDirect />
           <div id="content-wrapper" className="d-flex flex-column">
             {/* <!-- Main Content --> */}
             <div id="content">
@@ -37,177 +37,116 @@ class Cards extends Component {
               <div className="container-fluid">
                 {/* <!-- Page Heading --> */}
 
-                <PageHeading title="Weekly Tasks" />
+                <PageHeading title="Upcoming Tasks" />
                 <h5>
-                  After completing a task, fill out how many hours it took you
-                  to complete the task!
+                  The following assignments are due next week, please plan ahead accordingly!
                 </h5>
                 <div className="row">
                   <div class="col-lg-6">
-                    <CardBasic title="PSYC: Weekly Reflection">
-                      <form class="col-lg-6">
-                        <label>
-                          Completion Time:
-                          <br />
-                          <b>Assignment Completed!</b>
-                        </label>
-                      </form>
-                    </CardBasic>
-                  </div>
-                  <div class="col-lg-6">
-                    <CardBasic title="MATH: Problem Set 6">
-                      <form class="col-lg-6">
-                        <label>
-                          Completion Time:
-                          <br />
-                          <b>Assignment Completed!</b>
-                        </label>
-                      </form>
-                    </CardBasic>
-                  </div>
-                  <div class="col-lg-6">
-                    <CardBasic title="MATH: Webassign Unit 3-1">
-                      <form class="col-lg-6">
-                        <label>
-                          Completion Time:
-                          <br />
-                          <b>Assignment Completed!</b>
-                        </label>
-                      </form>
-                    </CardBasic>
-                  </div>
-                  <div class="col-lg-6">
-                    <CardBasic title="MATH: Webassign Unit 3-2">
-                      <form class="col-lg-6" onSubmit={this.handleSubmit}>
-                        <label>
-                          Estimated Completion Time: <code>4 Hours</code>
-                          <br />
-                          Completion Time:
-                          <br />
-                          <input type="text" name="name" />
-                        </label>
-                        ⠀
-                        <Link type="submit" value="Submit" to="/sets">
-                          Submit
-                        </Link>
-                      </form>
-                    </CardBasic>
-                  </div>
-                  <div class="col-lg-6">
-                    <CardBasic title="BIOL Lab: Protein Modeling Pre-Lab">
-                      <form class="col-lg-6">
-                        <label>
-                          Completion Time:
-                          <br />
-                          <b>Assignment Completed!</b>
-                        </label>
-                      </form>
-                    </CardBasic>
-                  </div>
-                  <div class="col-lg-6">
-                    <CardBasic title="BIOL Lab: Protein Modeling Lab Report">
-                      <form class="col-lg-6">
-                        <label>
-                          Estimated Completion Time: <code>2 Hours</code>
-                          <br />
-                          Completion Time:
-                          <br />
-                          <input type="text" name="name" />
-                        </label>
-                        ⠀
-                        <Link type="submit" value="Submit" to="/dashboard">
-                          Submit
-                        </Link>
-                      </form>
-                    </CardBasic>
-                  </div>
-                  <div class="col-lg-6">
-                    <CardBasic title="BIOL: Discussion Post #3">
-                      <form class="col-lg-6">
-                        <label>
-                          Completion Time:
-                          <br />
-                          <b>Assignment Completed!</b>
-                        </label>
-                      </form>
-                    </CardBasic>
-                  </div>
-                  <div class="col-lg-6">
-                    <CardBasic title="BIOL: Homework 7">
-                      <form class="col-lg-6">
-                        <label>
-                          Estimated Completion Time: <code>2 Hours</code>
-                          <br />
-                          Completion Time:
-                          <br />
-                          <input type="text" name="name" />
-                        </label>
-                        ⠀
-                        <Link type="submit" value="Submit" to="/dashboard">
-                          Submit
-                        </Link>
-                      </form>
-                    </CardBasic>
-                  </div>
-                  <div class="col-lg-6">
-                    <CardBasic title="CS: Linked Lists Workout">
-                      <form class="col-lg-6">
-                        <label>
-                          Completion Time:
-                          <br />
-                          <b>Assignment Completed!</b>
-                        </label>
-                      </form>
-                    </CardBasic>
-                  </div>
-                  <div class="col-lg-6">
-                    <CardBasic title="CS: Machine #2">
-                      <form class="col-lg-6">
-                        <label>
-                          Estimated Completion Time: <code>3 Hours</code>
-                          <br />
-                          Completion Time:
-                          <br />
-                          <input type="text" name="name" />
-                        </label>
-                        ⠀
-                        <Link type="submit" value="Submit" to="/dashboard">
-                          Submit
-                        </Link>
-                      </form>
-                    </CardBasic>
-                  </div>
-                  <div class="col-lg-6">
-                    <CardBasic title="CS: Ethics in AI Discussion">
+                    <CardBasic title="PSYC: Weekly Reflection 2">
                       <form class="col-lg-6">
                         <label>
                           Estimated Completion Time: <code>1 Hours</code>
-                          <br />
-                          Completion Time:
-                          <br />
-                          <input type="text" name="name" />
                         </label>
-                        ⠀
-                        <Link type="submit" value="Submit" to="/dashboard">
-                          Submit
-                        </Link>
                       </form>
                     </CardBasic>
                   </div>
                   <div class="col-lg-6">
-                    <CardBasic title="CS: Lab 9: UML Study">
+                    <CardBasic title="MATH: Problem Set 7">
                       <form class="col-lg-6">
                         <label>
                           Estimated Completion Time: <code>4 Hours</code>
-                          <br />
-                          Completion Time:
-                          <br />
-                          <input type="text" name="name" />
                         </label>
-                        ⠀
-                        <Link type="submit" value="Submit" to="/dashboard">
-                          Submit
-                        </Link>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="MATH: Webassign Unit 3-3">
+                      <form class="col-lg-6">
+                        <label>
+                          Estimated Completion Time: <code>3 Hours</code>
+                        </label>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="MATH: Webassign Unit 3-4">
+                      <form class="col-lg-6">
+                        <label>
+                          Estimated Completion Time: <code>3 Hours</code>
+                        </label>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="MATH: Webassign Unit 3-5">
+                      <form class="col-lg-6">
+                        <label>
+                          Estimated Completion Time: <code>3 Hours</code>
+                        </label>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="BIOL Lab: DNA Structures Pre-Lab">
+                      <form class="col-lg-6">
+                        <label>
+                          Estimated Completion Time: <code>2 Hours</code>
+                        </label>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="BIOL: Discussion Post #4">
+                      <form class="col-lg-6">
+                        <label>
+                          Estimated Completion Time: <code>1 Hours</code>
+                        </label>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="BIOL: Homework 8">
+                      <form class="col-lg-6">
+                        <label>
+                          Estimated Completion Time: <code>2 Hours</code>
+                        </label>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="BIOL Lab: DNA Structures Post-Lab">
+                      <form class="col-lg-6">
+                        <label>
+                          Estimated Completion Time: <code>2 Hours</code>
+                        </label>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="CS: Machine #3">
+                      <form class="col-lg-6">
+                        <label>
+                          Estimated Completion Time: <code>3 Hours</code>
+                        </label>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="CS: Lab 10 Debugging">
+                      <form class="col-lg-6">
+                        <label>
+                          Estimated Completion Time: <code>4 Hours</code>
+                        </label>
+                      </form>
+                    </CardBasic>
+                  </div>
+                  <div class="col-lg-6">
+                    <CardBasic title="CS: Array-Based Linked List Workout">
+                      <form class="col-lg-6">
+                        <label>
+                          Estimated Completion Time: <code>2 Hours</code>
+                        </label>
                       </form>
                     </CardBasic>
                   </div>
@@ -221,4 +160,4 @@ class Cards extends Component {
   }
 }
 
-export default Cards;
+export default Carrier;
